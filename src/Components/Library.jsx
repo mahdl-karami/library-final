@@ -13,7 +13,7 @@ function Library() {
 				))}
 			</ul>
 			{/* Liked Books List */}
-			<ul>
+			<ul className={styles.fav}>
 				<li>Favorit Books</li>
 				{favorits.length ? (
 					<>

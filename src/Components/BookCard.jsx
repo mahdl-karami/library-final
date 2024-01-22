@@ -1,13 +1,19 @@
+import { useState } from "react";
 import { GoHeartFill } from "react-icons/go";
+import styles from "../Styles/library.module.css";
 
 function BookCard({ book, book: { title, image, author, country, pages, link, id }, setFavorits, favorits }) {
+	const [isLiked, setIsLiked] = useState(false);
+	console.log(isLiked);
 	const likeHandler = (id) => {
 		if (favorits.includes(book)) {
 			const newFavorits = favorits.filter((fav) => fav.id != id);
 			setFavorits(newFavorits);
+			setIsLiked(false);
 			return;
 		}
 		setFavorits([...favorits, book]);
+		setIsLiked(true);
 	};
 	return (
 		<li>
@@ -25,7 +31,7 @@ function BookCard({ book, book: { title, image, author, country, pages, link, id
 					</p>
 				</span>
 			</div>
-			<button onClick={() => likeHandler(id)}>
+			<button onClick={() => likeHandler(id)} className={isLiked ? styles.liked : ""}>
 				<GoHeartFill />
 			</button>
 		</li>
