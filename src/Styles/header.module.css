@@ -1,36 +1,38 @@
 .header {
 	border-radius: 10px;
-	border: 2px #854836 solid;
+	background: #2e2e2e;
 	display: flex;
 	justify-content: space-between;
+    align-items: center;
 	padding: 1rem 2rem;
 }
 .header input,
 .header button {
-	border: 2px #854836 solid;
+	border: none;
 	outline: none;
-	background: transparent;
+	background: #e0e0e0;
 	padding: 0.5rem 1.2rem;
 	font-size: 1.3rem;
 	border-radius: 10px;
-	color: #854836;
+	color: #2e2e2e;
 	&::placeholder {
-		color: #854836bd;
+		color: #2e2e2e8e;
 	}
 }
 .header button {
 	transition: all 0.4s linear;
 	padding: 0.4rem 0.6rem;
 	margin-left: 0.6rem;
+	background: #1ab30f;
+	color: #e0e0e0;
 	&:hover {
-		background: #854836;
-		color: #000;
+		opacity: 80%;
 		cursor: pointer;
 	}
 }
 .header a {
 	transition: all 0.4s linear;
-	color: #854836;
+	color: #1ab30f;
 	font-size: 2rem;
 	&:hover {
 		opacity: 60%;
