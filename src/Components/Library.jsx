@@ -25,7 +25,7 @@ function Library() {
 						))}
 					</>
 				) : (
-					<p>Nothng In Here ...</p>
+					<p>Favorits Is Empty ...</p>
 				)}
 			</ul>
 		</div>

@@ -11,6 +11,29 @@
 	border-radius: 10px;
 	min-height: 200px;
 	height: fit-content;
+	padding: 1rem 0.4rem;
+	font-size: 1.1rem;
+	font-weight: 500;
+}
+
+.fav li {
+	display: flex;
+	align-items: center;
+	background: #12850a;
+	padding: 0.3rem 0.6rem;
+	border-radius: 10px;
+	margin: 0.3rem 0;
+	&:nth-child(1) {
+		background: transparent;
+		font-size: 1.3rem;
+		font-weight: 800;
+	}
+}
+
+.fav li img {
+	width: 35px;
+	margin-right: 0.4rem;
+	border-radius: 5px;
 }
 
 .booksList {
@@ -18,7 +41,7 @@
 }
 
 .booksList li {
-	margin: 0.3rem 0;
+	margin-bottom: 0.6rem;
 	border-radius: 10px;
 	background: #2e2e2e;
 	color: #e0e0e0;
