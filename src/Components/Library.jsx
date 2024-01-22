@@ -5,7 +5,7 @@ function Library({ visibleBooks }) {
 	const [favorits, setFavorits] = useState([]);
 	const [slider, setSlider] = useState(false);
 	return (
-		<div className={styles.library}>
+		<div className={styles.library} onScroll={setSlider(false)}>
 			{/* Books List */}
 			<ul className={styles.booksList}>
 				{visibleBooks.map((b) => (
