@@ -3,7 +3,7 @@
 	background: #2e2e2e;
 	display: flex;
 	justify-content: space-between;
-    align-items: center;
+	align-items: center;
 	padding: 1rem 2rem;
 }
 .header input,
@@ -36,5 +36,18 @@
 	font-size: 2rem;
 	&:hover {
 		opacity: 60%;
+	}
+}
+
+.header i {
+	display: none;
+}
+
+@media only screen and (max-width: 500px) {
+	.header a {
+		display: none;
+	}
+	.header input {
+		width: 65%;
 	}
 }
