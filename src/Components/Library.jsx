@@ -1,7 +1,7 @@
 import styles from "../Styles/library.module.css";
 import BookCard from "./BookCard";
 import { useState } from "react";
-function Library({ search , visibleBooks}) {
+function Library({ visibleBooks }) {
 	const [favorits, setFavorits] = useState([]);
 	return (
 		<div className={styles.library}>

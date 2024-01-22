@@ -8,7 +8,7 @@ function Header({ search, setSearch, setVisibleBooks }) {
 	return (
 		<header className={styles.header}>
 			<form onSubmit={(e) => submitHandler(e, search, books, setVisibleBooks)}>
-				<input name="search" type="text" placeholder="Search" value={search} onChange={({ target }) => setSearch(target.value)} />
+				<input name="search" type="text" placeholder="Search" value={search} onChange={({ target }) => setSearch(target.value.trimStart())} />
 				<button type="submit">
 					<FaSearch />
 				</button>
