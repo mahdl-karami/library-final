@@ -1,12 +1,16 @@
 import { GoHeartFill } from "react-icons/go";
 
-function BookCard({ book: { title, image, author, country, pages } }) {
+function BookCard({ book: { title, image, author, country, pages, link } }) {
 	return (
 		<li>
 			<div>
-				<img src={image} alt="Book Image" />
+				<a href={link}>
+					<img src={image} alt="Book Image" />
+				</a>
 				<span>
-					<p>{title}</p>
+					<p>
+						<a href={link}>{title}</a>
+					</p>
 					<p>{author}</p>
 					<p>
 						{country} | {pages} Page

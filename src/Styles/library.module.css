@@ -30,10 +30,10 @@
 	margin-right: 0.6rem;
 }
 
-.booksList li div span p {
-	&:nth-child(1) {
-		font-weight: 800;
-	}
+.booksList li div span a {
+	font-weight: 800;
+	color: #e0e0e0;
+	text-decoration: none;
 }
 
 .booksList li button {
@@ -42,10 +42,10 @@
 	border: none;
 	font-size: 1.8rem;
 	height: fit-content;
-    transition: all .3s ease-in-out;
-    cursor: pointer;
-    &:hover{
-        transform: scale(1.3);
-        color: red;
-    }
+	transition: all 0.3s ease-in-out;
+	cursor: pointer;
+	&:hover {
+		transform: scale(1.3);
+		color: red;
+	}
 }
