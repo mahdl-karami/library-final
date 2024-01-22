@@ -1,14 +1,13 @@
 import styles from "../Styles/library.module.css";
-import { books } from "../Constant/booksAPI";
 import BookCard from "./BookCard";
 import { useState } from "react";
-function Library() {
+function Library({ search , visibleBooks}) {
 	const [favorits, setFavorits] = useState([]);
 	return (
 		<div className={styles.library}>
 			{/* Books List */}
 			<ul className={styles.booksList}>
-				{books.map((b) => (
+				{visibleBooks.map((b) => (
 					<BookCard key={b.id} book={b} setFavorits={setFavorits} favorits={favorits} />
 				))}
 			</ul>

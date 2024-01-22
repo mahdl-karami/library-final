@@ -1,12 +1,14 @@
 import { VscGithub } from "react-icons/vsc";
 import { FaSearch } from "react-icons/fa";
-import styles from '../Styles/header.module.css'
+import styles from "../Styles/header.module.css";
 import { submitHandler } from "../Helpers/searchSubmit";
-function Header({ search, setSearch }) {
+import { books } from "../Constant/booksAPI";
+
+function Header({ search, setSearch, setVisibleBooks }) {
 	return (
 		<header className={styles.header}>
-			<form onSubmit={(e) => submitHandler(e)}>
-				<input type="text" placeholder="Search" value={search} onChange={({ target }) => setSearch(target.value)} />
+			<form onSubmit={(e) => submitHandler(e, search, books, setVisibleBooks)}>
+				<input name="search" type="text" placeholder="Search" value={search} onChange={({ target }) => setSearch(target.value)} />
 				<button type="submit">
 					<FaSearch />
 				</button>

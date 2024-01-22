@@ -4,7 +4,6 @@ import styles from "../Styles/library.module.css";
 
 function BookCard({ book, book: { title, image, author, country, pages, link, id }, setFavorits, favorits }) {
 	const [isLiked, setIsLiked] = useState(false);
-	console.log(isLiked);
 	const likeHandler = (id) => {
 		if (favorits.includes(book)) {
 			const newFavorits = favorits.filter((fav) => fav.id != id);
