@@ -51,3 +51,8 @@
 		width: 65%;
 	}
 }
+@media only screen and (max-width: 800px) {
+	.header{
+		margin-bottom: 4rem;
+	}
+}

@@ -14,6 +14,7 @@
 	padding: 1rem 0.4rem;
 	font-size: 1.1rem;
 	font-weight: 500;
+	transition: all .3s;
 }
 
 .fav li {
@@ -23,7 +24,7 @@
 	padding: 0.3rem 0.6rem;
 	border-radius: 10px;
 	margin: 0.3rem 0;
-	&:nth-child(1) {
+	&:nth-child(2) {
 		background: transparent;
 		font-size: 1.3rem;
 		font-weight: 800;
@@ -86,7 +87,16 @@
 		color: red;
 	}
 }
-
+.slider {
+	width: 40px;
+	height: 40px;
+	background: #1ab30f;
+	position: absolute;
+	right: -20px;
+	border-radius: 50%;
+	cursor: pointer;
+	display: none;
+}
 .liked {
 	color: red !important;
 }
@@ -97,5 +107,31 @@
 	}
 	.booksList {
 		width: 60%;
+	}
+}
+@media only screen and (max-width: 800px) {
+	.library {
+		display: inline;
+		position: relative;
+	}
+	.booksList {
+		width: 100%;
+	}
+	.fav {
+		width: 80%;
+		position: fixed;
+		top: 0;
+		transform: translate(-105%, 0.4rem);
+	}
+	.favSlide{
+		width: 80%;
+		position: fixed;
+		top: 0;
+		transform: translate(0%, 0.4rem);
+
+	}
+	.slider {
+		z-index: -1;
+		display: block !important;
 	}
 }

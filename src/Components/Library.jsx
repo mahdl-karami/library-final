@@ -3,6 +3,7 @@ import BookCard from "./BookCard";
 import { useState } from "react";
 function Library({ visibleBooks }) {
 	const [favorits, setFavorits] = useState([]);
+	const [slider, setSlider] = useState(false);
 	return (
 		<div className={styles.library}>
 			{/* Books List */}
@@ -12,7 +13,8 @@ function Library({ visibleBooks }) {
 				))}
 			</ul>
 			{/* Liked Books List */}
-			<ul className={styles.fav}>
+			<ul className={slider ? `${styles.favSlide} ${styles.fav}` : styles.fav}>
+				<div className={styles.slider} onClick={() => setSlider((s) => !s)}></div>
 				<li>Favorit Books</li>
 				{favorits.length ? (
 					<>
