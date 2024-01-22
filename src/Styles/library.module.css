@@ -90,3 +90,12 @@
 .liked {
 	color: red !important;
 }
+
+@media only screen and (max-width: 1000px) {
+	.fav {
+		width: 37%;
+	}
+	.booksList {
+		width: 60%;
+	}
+}
